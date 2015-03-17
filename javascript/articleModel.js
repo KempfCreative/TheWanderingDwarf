@@ -12,10 +12,10 @@ TWD.articleModel.loadArticles = function(){
                     url: TWD.articleController.articleEndpoint + 'mainArticle' + i + '.json',
                     cache: false,
                     success: function(data) {
-                        $(articleTargets[i]).append(data.success.articleImage);
-                        $(articleTargets[i]).append(data.success.articleTime);
-                        $(articleTargets[i]).append(data.success.articleHeading);
-                        $(articleTargets[i]).append(data.success.articleBody);
+                        $(articleTargets[i-1]).append(data.success.articleImage);
+                        $(articleTargets[i-1]).append(data.success.articleTime);
+                        $(articleTargets[i-1]).append(data.success.articleHeading);
+                        $(articleTargets[i-1]).append(data.success.articleBody);
                     }
                 });
             })(i);
