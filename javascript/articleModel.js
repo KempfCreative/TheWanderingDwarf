@@ -1,10 +1,9 @@
-TWD.articleModel = {};
+TWD.articleModel = {}
 
 TWD.articleModel.loadArticles = function(){
-    var articleDOM = $(document),
-        articleTargets = articleDOM.querySelectorAll('[data-article-target]');
+    var articleTargets = document.querySelectorAll('[data-article-target]');
 
-    if(!TWD.articleView.articlesLoaded){
+    if(!TWD.articleController.articlesLoaded){
         TWD.articleView.articlesLoaded = true;
         for (var i = 1; i <= articleTargets.length; i++) {
             (function(i){
@@ -22,4 +21,4 @@ TWD.articleModel.loadArticles = function(){
             })(i);
         };
     }
-};
+}

@@ -29,9 +29,9 @@ module.exports = function(grunt) {
                     'javascript/build/twd.js': [
                         'javascript/vendor/jquery-1.10.2.min.js',
                         'javascript/app.js',
-                        'javascript/articleView.js',
+                        'javascript/articleModel.js',
                         'javascript/articleController.js',
-                        'javascript/articleModel.js'
+                        'javascript/articleView.js'
                     ]
                 }
             }
@@ -74,5 +74,5 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', ['connect:livereload', 'open:local', 'watch']);
+    grunt.registerTask('default', ['concat:dist', 'connect:livereload', 'open:local', 'watch']);
 };

@@ -1,8 +1,11 @@
-TWD.articleController = {};
+TWD.articleController = {}
 TWD.articleController.articleEndpoint = {};
 
 TWD.articleController.init = function(){
     TWD.articleController.articleEndpoint = '/articles/top/'; //set the default
+    TWD.articleController.whichArticles();
+    TWD.articleController.articlesLoaded = false;
+    TWD.articleModel.loadArticles();
 };
 
 TWD.articleController.hasHistoryAPI = function(){
@@ -17,41 +20,52 @@ TWD.articleController.updateUrl = function(pageName){
 };
 
 TWD.articleController.whichArticles = function(){
-    var navigation = document.getElementByTagName('nav'),
+    var navigation = document.getElementsByTagName('nav'),
         navTop = $('#top'),
         navMasterworks = $('#masterworks'),
         navStrongHold = $('#stronghold'),
         navElves = $('#elves'),
         navBeasts = $('#beasts');
 
-    $(navigation).on('click', navTop, function(){
-        var state = $(this).getAttribute('data-article-nav');
+    navTop.on('click', function(e){
+        console.log('click on navTop');
+        console.log(this);
+        e.preventDefault();
+        var state = this.getAttribute('data-article-nav');
         TWD.articleController.updateUrl(state);
         TWD.articleController.articleEndpoint = '/articles/top/';
         TWD.articleModel.loadArticles();
     });
-    $(navigation).on('click', navMasterworks, function(){
-        var state = $(this).getAttribute('data-article-nav');
+    navMasterworks.on('click', function(e){
+        console.log('click on navMasterworks');
+        e.preventDefault();
+        var state = this.getAttribute('data-article-nav');
         TWD.articleController.updateUrl(state);
         TWD.articleController.articleEndpoint = '/articles/masterworks/';
         TWD.articleModel.loadArticles();
     });
-    $(navigation).on('click', navStrongHold, function(){
-        var state = $(this).getAttribute('data-article-nav');
+    navStrongHold.on('click', function(e){
+        console.log('click on navStrongHold');
+        e.preventDefault();
+        var state = this.getAttribute('data-article-nav');
         TWD.articleController.updateUrl(state);
         TWD.articleController.articleEndpoint = '/articles/strongholds/';
         TWD.articleModel.loadArticles();
     });
-    $(navigation).on('click', navElves, function(){
-        var state = $(this).getAttribute('data-article-nav');
+    navElves.on('click', function(e){
+        console.log('click on navElves');
+        e.preventDefault();
+        var state = this.getAttribute('data-article-nav');
         TWD.articleController.updateUrl(state);
         TWD.articleController.articleEndpoint = '/articles/elves/';
         TWD.articleModel.loadArticles();
     });
-    $(navigation).on('click', navBeasts, function(){
-        var state = $(this).getAttribute('data-article-nav');
+    navBeasts.on('click', function(e){
+        console.log('click on navBeasts');
+        e.preventDefault();
+        var state = this.getAttribute('data-article-nav');
         TWD.articleController.updateUrl(state);
         TWD.articleController.articleEndpoint = '/articles/beasts/';
         TWD.articleModel.loadArticles();
     });
-};
+}
