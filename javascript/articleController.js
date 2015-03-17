@@ -7,16 +7,21 @@ TWD.articleController.loadArticles = function(){
         articleTargets = articleDOM.querySelectorAll('[data-article-target]');
 
     if(!TWD.articleView.articlesLoaded){
-        $.ajax({
-            type: 'GET',
-            url: '/articles/mainArticle.json',
-            cache: false,
-            success: function(data) {
-                articleTargets[0].append(data.success.articleImage);
-                articleTargets[0].append(data.success.articleTime);
-                articleTargets[0].append(data.success.articleHeading);
-                articleTargets[0].append(data.success.articleBody);
-            }
-        })
+        TWD.articleView.articlesLoaded = true;
+        for (var i = 1; i <= articleTargets.length; i++) {
+            (function(i){
+                $.ajax({
+                    type: 'GET',
+                    url: '/articles/mainArticle' + i + '.json',
+                    cache: false,
+                    success: function(data) {
+                        $(articleTargets[i]).append(data.success.articleImage);
+                        $(articleTargets[i]).append(data.success.articleTime);
+                        $(articleTargets[i]).append(data.success.articleHeading);
+                        $(articleTargets[i]).append(data.success.articleBody);
+                    }
+                });
+            })(i);
+        };
     }
 };
