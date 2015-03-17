@@ -9,7 +9,7 @@
         <title>The Wandering Dwarf</title>
         <meta name="description" content="A drunken, dwarfen take on the news from around the dwarven stronghold.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="css/style.css">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
     <body>
@@ -19,12 +19,10 @@
 
         <div id="site-content" class="placeholder-content">
             <nav class="container container-navigation">
+                <a href="index.html" class="icon-logo">
+                    <h1 class="logo-text">The Wandering <em class="logo-text_hard">Dwarf</em></h1>
+                </a>
                 <ul class="feature feature-content_list">
-                    <li class="list-item logo">
-                        <a href="index.html">
-                            <h1>The Wandering <em>Dwarf</em></h1>
-                        </a>
-                    </li>
                     <li class="list-item">
                         <a href="#" id="top" data-article-nav="top">
                             Top Stories
@@ -53,7 +51,7 @@
                 </ul>
             </nav>
             <section class="container container-article_main">
-                <heading>
+                <heading class="text-main_centered">
                     <h2>Main Stories</h2>
                 </heading>
                 <article class="container article-feature" data-article-target="1">
@@ -64,7 +62,7 @@
                 </article>
             </section>
             <section class="container container-article_secondary">
-                <heading>
+                <heading class="text-secondary_centered">
                     <h3>Other Stories</h3>
                 </heading>
                 <article class="container article-blurb" data-article-target="3">
@@ -94,8 +92,6 @@
             </section>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="javascript/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="javascript/build/twd.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

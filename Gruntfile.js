@@ -40,14 +40,14 @@ module.exports = function(grunt) {
             options: {
                 sassDir: 'sass',
                 cssDir: 'css',
-                imagesDir: 'img',
-                javascriptsDir: 'js',
+                imagesDir: 'images',
+                javascriptsDir: 'javascript',
                 fontsDir: 'fonts',
                 relativeAssets: true
             },
             debug: {
                 options: {
-                    debugInfo: true
+                    debugInfo: false
                 }
             }
         },
