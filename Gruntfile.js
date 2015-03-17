@@ -58,5 +58,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-livereload');
 
-    grunt.registerTask('default', ['watch', 'compass', 'connect']);
+    grunt.registerTask('default', ['watch', 'compass', 'connect', 'open:local']);
 };
