@@ -10,6 +10,7 @@
     },
     "devDependencies": {
         "grunt": "0.4.5",
+        "matchdep": "*",
         "grunt-contrib-watch": "*",
         "grunt-contrib-compass": "*",
         "grunt-contrib-connect": "*",
