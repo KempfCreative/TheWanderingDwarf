@@ -24,65 +24,67 @@ a img { border: none; }
 /* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
-@font-face { font-family: "BilboSwashCaps"; src: url('../fonts/../fonts/BilboSwashCaps-Regular-webfont.eot?1426582922'); src: url('../fonts/../fonts/BilboSwashCaps-Regular-webfont.eot?&1426582922#iefix') format('embedded-opentype'), url('../fonts/../fonts/BilboSwashCaps-Regular-webfont.woff?1426582922') format('woff'), url('../fonts/../fonts/BilboSwashCaps-Regular-webfont.ttf?1426582922') format('truetype'), url('../fonts/../fonts/BilboSwashCaps-Regular-webfont.svg?1426582922') format('svg'); }
-@font-face { font-family: "Imprima-Regular"; src: url('../fonts/../fonts/Imprima-Regular-webfont.eot?1426582922'); src: url('../fonts/../fonts/Imprima-Regular-webfont.eot?&1426582922#iefix') format('embedded-opentype'), url('../fonts/../fonts/Imprima-Regular-webfont.woff?1426582922') format('woff'), url('../fonts/../fonts/Imprima-Regular-webfont.ttf?1426582922') format('truetype'), url('../fonts/../fonts/Imprima-Regular-webfont.svg?1426582922') format('svg'); }
-/* line 6, ../sass/style.scss */
+@font-face { font-family: "BilboSwashCaps"; src: url('../fonts/../fonts/BilboSwashCaps-Regular-webfont.eot?1426590666'); src: url('../fonts/../fonts/BilboSwashCaps-Regular-webfont.eot?&1426590666#iefix') format('embedded-opentype'), url('../fonts/../fonts/BilboSwashCaps-Regular-webfont.woff?1426590666') format('woff'), url('../fonts/../fonts/BilboSwashCaps-Regular-webfont.ttf?1426590666') format('truetype'), url('../fonts/../fonts/BilboSwashCaps-Regular-webfont.svg?1426590666') format('svg'); }
+@font-face { font-family: "Imprima-Regular"; src: url('../fonts/../fonts/Imprima-Regular-webfont.eot?1426590666'); src: url('../fonts/../fonts/Imprima-Regular-webfont.eot?&1426590666#iefix') format('embedded-opentype'), url('../fonts/../fonts/Imprima-Regular-webfont.woff?1426590666') format('woff'), url('../fonts/../fonts/Imprima-Regular-webfont.ttf?1426590666') format('truetype'), url('../fonts/../fonts/Imprima-Regular-webfont.svg?1426590666') format('svg'); }
+/* line 7, ../sass/style.scss */
 * { box-sizing: border-box; }
 
-/* line 9, ../sass/style.scss */
+/* line 10, ../sass/style.scss */
 body { background: #252525; }
 
-/* line 13, ../sass/style.scss */
-.icon-logo { display: inline-block; width: 9em; height: 12em; background: #D4D4D4; padding: 0.5em; text-decoration: none; }
-/* line 20, ../sass/style.scss */
-.icon-logo .logo-text { font-family: 'BilboSwashCaps'; color: #252525; font-size: 1.3em; line-height: 1.25em; font-style: normal; text-align: center; }
-/* line 27, ../sass/style.scss */
-.icon-logo .logo-text_hard { display: inline-block; font-family: 'Imprima-Regular'; font-size: 2em; margin-top: 0.2em; }
+/* line 14, ../sass/style.scss */
+.icon-logo { display: inline-block; width: 9em; height: 12em; background: #f24f4f; padding: 0.2em; text-decoration: none; }
+/* line 21, ../sass/style.scss */
+.icon-logo .logo-text { font-family: 'Imprima-Regular'; color: #c2c2c2; font-size: 1em; line-height: 1.25em; font-style: normal; text-align: center; margin: 1em 0 0 0; }
+/* line 29, ../sass/style.scss */
+.icon-logo .logo-text_hard { display: inline-block; font-family: 'BilboSwashCaps'; font-size: 3em; margin-top: 0.5em; }
 
-/* line 36, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 .container-navigation { float: left; position: fixed; width: 9em; height: 100vh; background: #535353; }
-/* line 42, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 .container-navigation_hidden { width: 0em; }
 
-/* line 46, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 .feature-content_list { display: block; padding: 1em 0.2em 0 0.2em; }
-/* line 49, ../sass/style.scss */
-.feature-content_list .list-item { font-family: 'Imprima-Regular'; color: #c2c2c2; font-size: 0.9em; padding: 0.2em 0 0.2em 0; margin: 1em 0; }
-/* line 55, ../sass/style.scss */
-.feature-content_list .list-item a { color: #c2c2c2; text-decoration: none; }
-/* line 58, ../sass/style.scss */
-.feature-content_list .list-item a:active { text-decoration: underline; }
+/* line 51, ../sass/style.scss */
+.feature-content_list .list-item { font-family: 'Imprima-Regular'; color: #c2c2c2; font-size: 0.9em; padding: 0.2em 0 0.2em 0; margin: 1em 0.2em; }
+/* line 57, ../sass/style.scss */
+.feature-content_list .list-item a { color: #c2c2c2; line-height: 1.2em; text-decoration: none; }
+/* line 61, ../sass/style.scss */
+.feature-content_list .list-item a:hover { text-decoration: underline; }
 
-/* line 66, ../sass/style.scss */
-.container-article_main { display: inline-block; float: left; margin-left: 9em; padding: 1em; }
-/* line 72, ../sass/style.scss */
-.container-article_secondary { display: inline-block; float: left; margin-left: 9em; padding: 1em; }
+/* line 69, ../sass/style.scss */
+.container-article_main { display: inline-block; float: left; margin-left: 10%; padding: 1em; width: 60%; height: 100%; }
+/* line 77, ../sass/style.scss */
+.container-article_secondary { display: inline-block; float: right; margin-left: 1%; padding: 1em; width: 29%; }
 
-/* line 79, ../sass/style.scss */
-.article-feature { display: inline-block; width: 100%; }
-/* line 82, ../sass/style.scss */
-.article-feature .image-container { float: left; display: inline-block; }
 /* line 85, ../sass/style.scss */
-.article-feature .image-container .image { width: 100%; height: auto; display: inline-block; }
-
+.article-feature { display: inline-block; width: 100%; }
+/* line 88, ../sass/style.scss */
+.article-feature .image-container { float: left; width: 5.13347%; display: inline-block; }
 /* line 92, ../sass/style.scss */
-.article-blurb { display: inline-block; width: 100%; }
-/* line 95, ../sass/style.scss */
-.article-blurb .image-container { float: left; display: inline-block; }
-/* line 98, ../sass/style.scss */
-.article-blurb .image-container .image { width: 100%; height: auto; display: inline-block; }
+.article-feature .image-container .image { width: 100%; height: auto; display: inline-block; }
+/* line 99, ../sass/style.scss */
+.article-feature .heading-article a { display: inline-block; float: left; font-family: "BilboSwashCaps"; color: #c2c2c2; font-weight: 400; font-style: normal; text-transform: none; letter-spacing: 1px; border-width: 0px 0px 1px 0px; border-style: solid; padding: 0px 0px 5px 0px; margin: 0 0 0 1%; vertical-align: baseline; text-decoration: none; font-size: 3em; line-height: 1.25em; width: 93.86653%; }
+/* line 106, ../sass/style.scss */
+.article-feature .body-article { font-size: 1.25em; line-height: 1.6em; margin: 0 0 1.6em 0; color: #c2c2c2; font-family: 'Imprima-Regular'; font-weight: 400; font-style: normal; }
 
-/* line 107, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
+.article-blurb { display: inline-block; width: 100%; color: #000000; }
+/* line 120, ../sass/style.scss */
+.article-blurb .image-container { float: left; width: 10.2669405%; display: inline-block; }
+/* line 124, ../sass/style.scss */
+.article-blurb .image-container .image { width: 100%; height: auto; display: inline-block; }
+/* line 131, ../sass/style.scss */
+.article-blurb .heading-article a { display: inline-block; float: left; font-family: "BilboSwashCaps"; color: #c2c2c2; font-weight: 400; font-style: normal; text-transform: none; letter-spacing: 1px; border-width: 0px 0px 1px 0px; border-style: solid; padding: 0px 0px 5px 0px; margin: 0 0 0 1%; vertical-align: baseline; text-decoration: none; font-size: 2.375em; line-height: 0.98958333em; width: 88.7330595%; }
+/* line 138, ../sass/style.scss */
+.article-blurb .body-article { font-size: 0.98958333em; line-height: 1.5em; margin: 0 0 1.5em 0; color: #c2c2c2; font-family: 'Imprima-Regular'; font-weight: 400; font-style: normal; }
+
+/* line 150, ../sass/style.scss */
 .text-main_centered { display: inline-block; font-family: 'Imprima-Regular'; color: #f24f4f; text-align: center; width: 100%; border-bottom: 1px solid #f24f4f; margin: 0 auto 1em auto; padding: 0 0 .5em 0; }
 
-/* line 117, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 .text-secondary_centered { display: inline-block; font-family: 'Imprima-Regular'; color: #f24f4f; text-align: center; width: 100%; border-bottom: 1px solid #f24f4f; margin: 0 auto 1em auto; padding: 0 0 .5em 0; }
 
-/* line 127, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 time { float: left; display: block; color: #c2c2c2; font-size: .5em; text-transform: uppercase; margin: 0 0 0 1%; }
-
-/* line 136, ../sass/style.scss */
-.heading-article a { display: inline-block; float: left; font-size: 3em; font-family: "BilboSwashCaps"; line-height: 1.25em; color: #c2c2c2; font-weight: 400; font-style: normal; text-transform: none; letter-spacing: 1px; border-width: 0px 0px 1px 0px; border-style: solid; padding: 0px 0px 5px 0px; margin: 0 0 0 1%; vertical-align: baseline; text-decoration: none; width: 95%; }
-
-/* line 156, ../sass/style.scss */
-.body-article { font-size: 1.25em; line-height: 1.6em; margin: 0 0 1.6em 0; color: #c2c2c2; font-family: 'Imprima-Regular'; font-weight: 400; font-style: normal; }

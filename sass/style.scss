@@ -1,6 +1,7 @@
  @import "compass/reset";
  @import "fonts";
  @import "variables";
+ @import "mixins";
 
 // Layout CSS
 * {
@@ -14,21 +15,22 @@ body {
     display: inline-block;
     width: 9em;
     height: 12em;
-    background: $logoBg;
-    padding:0.5em;
+    background: $cAccent;
+    padding:0.2em;
     text-decoration: none;
     .logo-text {
-        font-family: 'BilboSwashCaps';
-        color: $bodyBg;
-        font-size:1.3em;
+        font-family: 'Imprima-Regular';
+        color: $cFontMain;
+        font-size:1em;
         line-height: 1.25em;
         font-style: normal;
         text-align: center;
+        margin: 1em 0 0 0;
         &_hard {
             display: inline-block;
-            font-family: 'Imprima-Regular';
-            font-size: 2em;
-            margin-top: 0.2em;
+            font-family: 'BilboSwashCaps';
+            font-size: 3em;
+            margin-top: 0.5em;
         }
     }
 }
@@ -51,11 +53,12 @@ body {
         color:$cFontMain;
         font-size: 0.9em;
         padding:0.2em 0 0.2em 0;
-        margin: 1em 0;
+        margin: 1em 0.2em;
         a {
             color:$cFontMain;
+            line-height: 1.2em;
             text-decoration: none;
-            &:active {
+            &:hover {
                 text-decoration: underline;
             }
         }
@@ -66,14 +69,17 @@ body {
     &_main {
         display: inline-block;
         float: left;
-        margin-left: 9em;
+        margin-left: 10%;
         padding:1em;
+        width: 60%;
+        height: 100%;
     }
     &_secondary {
         display: inline-block;
-        float: left;
-        margin-left: 9em;
+        float: right;
+        margin-left: 1%;
         padding:1em;
+        width: 29%;
     }
 }
 .article-feature {
@@ -81,6 +87,7 @@ body {
     width: 100%;
     .image-container {
         float: left;
+        width: 5.13347%;
         display: inline-block;
         .image {
             width:100%;
@@ -88,18 +95,54 @@ body {
             display: inline-block;
         }
     }
+    .heading-article {
+        a {
+            @include headingPreset;
+            font-size: 3em;
+            line-height: 1.25em;
+            width:93.86653%;
+        }
+    }
+    .body-article {
+        font-size: 1.25em;
+        line-height: 1.6em;
+        margin: 0 0 1.6em 0;
+        color: $cFontMain;
+        font-family: 'Imprima-Regular';
+        font-weight: 400;
+        font-style: normal;
+    }
 }
 .article-blurb {
     display: inline-block;
     width: 100%;
+    color: $navBg;
     .image-container {
         float: left;
+        width: 10.2669405%;
         display: inline-block;
         .image {
             width:100%;
             height:auto;
             display: inline-block;
         }
+    }
+    .heading-article {
+        a {
+            @include headingPreset;
+            font-size: 2.375em;
+            line-height: 0.98958333em;
+            width:88.7330595%;
+        }
+    }
+    .body-article {
+        font-size: 0.98958333em;
+        line-height: 1.5em;
+        margin: 0 0 1.5em 0;
+        color: $cFontMain;
+        font-family: 'Imprima-Regular';
+        font-weight: 400;
+        font-style: normal;
     }
 }
 
@@ -107,20 +150,20 @@ body {
 .text-main_centered {
     display: inline-block;
     font-family: 'Imprima-Regular';
-    color: $cFontAccent;
+    color: $cAccent;
     text-align: center;
     width: 100%;
-    border-bottom: 1px solid $cFontAccent;
+    border-bottom: 1px solid $cAccent;
     margin: 0 auto 1em auto;
     padding: 0 0 .5em 0;
 }
 .text-secondary_centered {
     display: inline-block;
     font-family: 'Imprima-Regular';
-    color: $cFontAccent;
+    color: $cAccent;
     text-align: center;
     width: 100%;
-    border-bottom: 1px solid $cFontAccent;
+    border-bottom: 1px solid $cAccent;
     margin: 0 auto 1em auto;
     padding: 0 0 .5em 0;
 }
@@ -132,33 +175,3 @@ time {
         text-transform: uppercase;
         margin: 0 0 0 1%;
     }
-.heading-article {
-    a {
-        display: inline-block;
-        float: left;
-        font-size: 3em;
-        font-family: "BilboSwashCaps";
-        line-height: 1.25em;
-        color:$cFontMain;
-        font-weight: 400;
-        font-style: normal;
-        text-transform: none;
-        letter-spacing: 1px;
-        border-width: 0px 0px 1px 0px;
-        border-style: solid;
-        padding: 0px 0px 5px 0px;
-        margin: 0 0 0 1%;
-        vertical-align: baseline;
-        text-decoration: none;
-        width:95%;
-    }
-}
-.body-article {
-    font-size: 1.25em;
-    line-height: 1.6em;
-    margin: 0 0 1.6em 0;
-    color: $cFontMain;
-    font-family: 'Imprima-Regular';
-    font-weight: 400;
-    font-style: normal;
-}
