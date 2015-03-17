@@ -10,12 +10,10 @@
     },
     "devDependencies": {
         "grunt": "0.4.5",
-        "grunt-contrib-cssmin": "*",
-        "grunt-contrib-sass": "*",
         "grunt-contrib-watch": "*",
         "grunt-contrib-compass": "*",
         "grunt-contrib-connect": "*",
         "grunt-contrib-livereload": "*",
-        "grunt-contrib-concat": "*"
+        "grunt-open": "*"
     }
 }
