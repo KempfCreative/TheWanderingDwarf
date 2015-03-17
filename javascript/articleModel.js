@@ -10,7 +10,7 @@ TWD.articleModel.loadArticles = function(){
             (function(i){
                 $.ajax({
                     type: 'GET',
-                    url: '/articles/mainArticle' + i + '.json',
+                    url: TWD.articleController.articleEndpoint + 'mainArticle' + i + '.json',
                     cache: false,
                     success: function(data) {
                         $(articleTargets[i]).append(data.success.articleImage);

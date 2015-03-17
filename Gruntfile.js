@@ -4,6 +4,8 @@ var mountFolder = function(connect, dir) {
     return connect.static(require('path').resolve(dir));
 };
 module.exports = function(grunt) {
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         watch: {
@@ -12,9 +14,28 @@ module.exports = function(grunt) {
                 tasks: ['compass']
             },
             livereload: {
-                files: ['*.html', 'css/*.css', 'javascript/**/*.js', 'images/**/*.{png,jpg,jpeg,webp}']
+                files: ['*.html', 'css/*.css', 'javascript/**/*.js', 'images/**/*.{png,jpg,jpeg,webp}', 'articles/**/*.json'],
+                tasks: ['concat:dist']
             }
         },
+        concat: {
+            options: {
+                stripBanners: false,
+                separator: ';',
+                banner:''
+            },
+            dist: {
+                files: {
+                    'javascript/build/twd.js': [
+                        'javascript/vendor/jquery-1.10.2.min.js',
+                        'javascript/app.js',
+                        'javascript/articleView.js',
+                        'javascript/articleController.js',
+                        'javascript/articleModel.js'
+                    ]
+                }
+            }
+        }
         compass: {
             options: {
                 sassDir: 'sass',
