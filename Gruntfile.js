@@ -59,5 +59,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-livereload');
     grunt.loadNpmTasks('grunt-open');
 
-    grunt.registerTask('default', ['watch', 'compass', 'connect', 'open:local']);
+    grunt.registerTask('default', ['connect:livereload', 'open:local', 'watch']);
 };
