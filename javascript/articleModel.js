@@ -5,6 +5,7 @@ TWD.articleModel.loadArticles = function(){
 
     if(!TWD.articleController.articlesLoaded){
         TWD.articleView.articlesLoaded = true;
+        $(articleTargets).empty();
         for (var i = 1; i <= articleTargets.length; i++) {
             (function(i){
                 $.ajax({
