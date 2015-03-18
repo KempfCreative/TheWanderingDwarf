@@ -69,3 +69,12 @@ TWD.articleController.whichArticles = function(){
         TWD.articleModel.loadArticles();
     });
 }
+
+TWD.articleController.swiperInit = function() {
+    $(document).ready(function(){
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: false
+        })
+    });
+}
