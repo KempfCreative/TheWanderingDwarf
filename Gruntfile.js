@@ -28,6 +28,7 @@ module.exports = function(grunt) {
                 files: {
                     'javascript/build/twd.js': [
                         'javascript/vendor/jquery-1.10.2.min.js',
+                        'javascript/vendor/idangerous.swiper.js',
                         'javascript/app.js',
                         'javascript/articleModel.js',
                         'javascript/articleController.js',
